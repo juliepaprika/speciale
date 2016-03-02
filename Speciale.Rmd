@@ -1,18 +1,73 @@
 ---
-title: "Economics of a Bottleneck, review"
-author: "Julie Paprika Højfeldt, jrs731"
+number_sections: TRUE
+fontsize: 12pt
+geometry: margin=1in
+linestretch: 1.5
+
 output: pdf_document
-
+bibliography : speciale.bib
+lang: danish
+linkcolor: black
 ---
-Authors: Richard Arnott, André de Palma, Robin Lindsey  
-Journal of urban economics 27, (1990)  
-Title: Economics of a Bottleneck  
 
-\section{Introduction}
-De simpleste modeller der har at gøre med urban trængsel antager, at et fast antal, $N$, identiske individer, en per bil, må rejse mellem hjem og arbejde i myldretiden på en enkelt vej. Den individuelle rejsetid, $T$, er givet ved trængselsfunktionen $T=T(N,w)$, hvor $w$ er vej bredden og $\frac{\partial{T}} {\partial{N}} >0$ og $\frac{\partial{T}} {\partial{w}} <0$.
-Dette kan tolkes som en implicit antagelse af at længden på myldretiden er eksogen og at trafikflowet er uniformt i myldretiden. Dette beskrives i artiklen som den "naive" trængselsmodel modsat den mere sofistikerede trængselsmodel som eksplicit behandler den fysiske trafik strøm.
+\setcounter{secnumdepth}{3}
+\thispagestyle{empty}
+\begin{abstract}
+Her står der noget tekst
+\end{abstract}
+\newpage
+\tableofcontents
 
-Modellen er blevet udvidet til at tage hensyn til elastisk rejse efterspørgsel og flere tilstande er blevet inkorporeret i den monocentriske-bymodel. Selvom modellen er brugt meget, evner den dog ikke at svare på spørgsmålet *hvornår tager individer hjemmefra?* og på den måde beksrive trade-off'et individerne står med, skal man tage tidligere eller senere afsted og undgå myldretidstrafikken, og betale "straffen": at komme tidligere eller senere på arbejde. Eller skal man rejse i myldretidstrafikken hvor rejsetiden er lang, men komme på arbejde i retmæssig tid.
+\newpage
+\section*{Indledning}
+\addcontentsline{toc}{section}{Indledning}
+Det er vigtigt at undersøge hvordan man kan glatte brugere af metroen ud. Allerede tidligere har der været kapacitetsproblemer, især omkring Amagerbro og Nørreport, hvilket er blevet afhjulpet af at fjerne nogle af siddepladserne i metroen. Men med åbningen af Metro Cityringen og det øgede befolkningstal i København vil der i fremtiden opleves større pres på kapaciteten i metroen i myldretiden. Omvendt er der perioder af dagen hvor der ikke er mange mennesker med metroen. Det er et klassisk spilteori dilemma, af et offentlig tilgængeligt gode. Når en ekstra bruger stiger på metroen, oplever denne først og fremmest en nytte ved at blive transporteret fra A til B. Tilgengæld påfører brugeren en negativ eksternalitet for de brugere der allerede er inde i metroen, da der nu ikke er nok siddepladser og man skal stå tæt op ad hinanden. Dette fænomen kaldes crowding cost. 
+En måde at få folk til at fordele sig over dagen er ved hjælp af prisdiskriminering/prisdifferentierng. Ved at øge priserne for rejsende i myldretiden og mindske priserne for rejsende udenfor myldretiden kan man få folk til at bruge metroen på andre tidspunkter.
+\subsection*{Litteratur}
+\addcontentsline{toc}{subsection}{Litteratur}
+\cite{de_palma_dynamic_2010} og \cite{fosgerau_marginal_2009} og \cite{hjorth_estimating_2015} og \cite{de_palma_economics_2015} og \cite{hall_pareto_2015} og \cite{de_palma_discomfort_2015}
+\newpage
+\section{Model}
+Pointen er at der skal vælges et rejsehjemmel niveau der maksimerer samfundsvelfærden, ved at reducere trængslen i metroen.
+\subsection{Velfærdsfunktionen, $W$}
+Velfærdsfunktionen afænger derved af en omkostningsfunktion og af prisen på rejsehjemmel:
+\begin{equation}
+W = \int [(C(t|t_*)-\tau(t))f(t)] dt
+\end{equation}
+hvor $c(t|t_*)$ er omkostningsfunktionen der afhænger af tidspunktet man rejser på, givet det ideele tidspunkt at rejse på. $\tau(t)$ viser prisniveauet for rejsehjemmel afhængig af tid det er netop denne funktion vi ønsker at finde sådan at det maksimerer velfærdsfunktionen. $f(t)$ er beskrivelsen af en tæthedsfunktion, som endnu ikke er defineret, men som har form som en bakke, for nemheds skyld udelades eventuelt venstresiden af bakken. Det betyder at det netop er det $\tau$ der maksimerer $W$ der skal være svaret på modellen/specialet.  
+\subsection{Omkostningsfunktionen, $C$}
+Velfærdsfunktionen afhænger af en omkostningsfunktion. Denne betegnes $C$ og er en money-metric omkostningsmodel, der betyder, at brugernes nytte regnes i penge. Altså er alle omkostninger omregnet til penge. Omkostningsfunktionen består af tre dele; en **c**rowding **c**ost funktion, omkostningerne ved at rejse på et andet tidspunkt end det ønskede (som er i myldretiden) og rejsehjemmel. Det giver følgende:
+\begin{equation}
+C(cc,t) = cc + v(t-t_*) + \tau(t_*)
+\end{equation}
+Endnu engang har vi $\tau$ som skal findes. Derudover har vi $v(t-t_*)$ som beskriver den unytte en bruger har ved at rejse udenfor det ønskede tidspunkt, denne kan . Sidst er der crowding cost funktionen, som består af en efterspørgselsfunktion $D(t)$ og ser ud som følgende:
 
-\subsection{Modellen}
+$$ cc(t) = T(D(t)) $$
+
+Hvor $T$ er den funktion der beskriver unytten ved at rejse, givet efterspørgslen på metrotog i et givent tidspunkt $t$.
+
+\subsection{Analyse}
+\subsubsection{Kritik af modellen}
+1. Outside options som taxa, bil og bus, ect.
+2. Frekvensen på afgange kan evt. øges (undersøg dette nærmere med drift afdelingen i forhold til hvor realistisk denne mulighed egentlig er)
+3. Størrelsen på tog kan øges, men kan den det? Hvad med pladsen på metrostationerne? Kan det lades sig gøre på den nye linje? Kan størrelsen muligvis øges ved at fjerne noget af interiøret, såsom færre siddepladser - giver det oså højere crowding cost?  
+
+\subsubsection{Empiri - Metroselskabet}
+
+\section{Diskussion}
+
+\section*{Konklusion}
+\addcontentsline{toc}{section}{Konklusion}
+\cleardoublepage
+\pagenumbering{roman}
+\newpage
+
+\begin{appendix}
+\section{Appendix} \label{App:AppendixA}
+Her starter mit appendix
+\newpage
+\section{Appendix} \label{App:AppendixB}
+\end{appendix}
+\newpage
+\addcontentsline{toc}{section}{Litteraturliste}
 
