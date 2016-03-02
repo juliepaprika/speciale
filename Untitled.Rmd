@@ -1,0 +1,71 @@
+---
+number_sections: TRUE
+fontsize: 12pt
+geometry: margin=1in
+linestretch: 1.5
+
+output: pdf_document
+bibliography : speciale.bib
+lang: danish
+linkcolor: black
+---
+
+\setcounter{secnumdepth}{3}
+\thispagestyle{empty}
+\begin{abstract}
+Her står der noget tekst
+\end{abstract}
+\newpage
+\tableofcontents
+
+\newpage
+\section*{Indledning}
+\addcontentsline{toc}{section}{Indledning}
+\subsection*{Litteratur}
+\addcontentsline{toc}{subsection}{Litteratur}
+\cite{de_palma_dynamic_2010} og \cite{fosgerau_marginal_2009} og \cite{hjorth_estimating_2015} og \cite{de_palma_economics_2015} og \cite{hall_pareto_2015} og \cite{de_palma_discomfort_2015}
+\newpage
+\section{Model}
+Pointen er at der skal vælges et rejsehjemmel niveau der maksimerer samfundsvelfærden, ved at reducere trængslen i metroen.
+\subsection{Velfærdsfunktionen, $W$}
+Velfærdsfunktionen afænger derved af en omkostningsfunktion og af prisen på rejsehjemmel:
+\begin{equation}
+W = \int [(C(t|t_*)-\tau(t))f(t)] dt
+\end{equation}
+hvor $c(t|t_*)$ er omkostningsfunktionen der afhænger af tidspunktet man rejser på, givet det ideele tidspunkt at rejse på. $\tau(t)$ viser prisniveauet for rejsehjemmel afhængig af tid det er netop denne funktion vi ønsker at finde sådan at det maksimerer velfærdsfunktionen. $f(t)$ er beskrivelsen af en tæthedsfunktion, som endnu ikke er defineret, men som har form som en bakke, for nemheds skyld udelades eventuelt venstresiden af bakken. Det betyder at det netop er det $\tau$ der maksimerer $W$ der skal være svaret på modellen/specialet.  
+\subsection{Omkostningsfunktionen, $C$}
+Velfærdsfunktionen afhænger af en omkostningsfunktion. Denne betegnes $C$ og er en money-metric omkostningsmodel, der betyder, at brugernes nytte regnes i penge. Altså er alle omkostninger omregnet til penge. Omkostningsfunktionen består af tre dele; en **c**rowding **c**ost funktion, omkostningerne ved at rejse på et andet tidspunkt end det ønskede (som er i myldretiden) og rejsehjemmel. Det giver følgende:
+\begin{equation}
+C(cc,t) = cc + v(t-t_*) + \tau(t_*)
+\end{equation}
+Endnu engang har vi $\tau$ som skal findes. Derudover har vi $v(t-t_*)$ som beskriver den unytte en bruger har ved at rejse udenfor det ønskede tidspunkt, denne kan . Sidst er der crowding cost funktionen, som består af en efterspørgselsfunktion $D(t)$ og ser ud som følgende:
+
+$$ cc(t) = T(D(t)) $$
+
+Hvor $T$ er den funktion der beskriver unytten ved at rejse, givet efterspørgslen på metrotog i et givent tidspunkt $t$.
+
+\subsection{Analyse}
+\subsubsection{Kritik af modellen}
+1. Outside options som taxa, bil og bus, ect.
+2. Frekvensen på afgange kan evt. øges (undersøg dette nærmere med drift afdelingen i forhold til hvor realistisk denne mulighed egentlig er)
+3. Størrelsen på tog kan øges, men kan den det? Hvad med pladsen på metrostationerne? Kan det lades sig gøre på den nye linje? Kan størrelsen muligvis øges ved at fjerne noget af interiøret, såsom færre siddepladser - giver det oså højere crowding cost?  
+
+\subsubsection{Empiri - Metroselskabet}
+
+\section{Diskussion}
+
+\section*{Konklusion}
+\addcontentsline{toc}{section}{Konklusion}
+\cleardoublepage
+\pagenumbering{roman}
+\newpage
+
+\begin{appendix}
+\section{Appendix} \label{App:AppendixA}
+Her starter mit appendix
+\newpage
+\section{Appendix} \label{App:AppendixB}
+\end{appendix}
+\newpage
+\addcontentsline{toc}{section}{Litteraturliste}
+

@@ -1,0 +1,18 @@
+---
+title: "Economics of a Bottleneck, review"
+author: "Julie Paprika Højfeldt, jrs731"
+output: pdf_document
+
+---
+Authors: Richard Arnott, André de Palma, Robin Lindsey  
+Journal of urban economics 27, (1990)  
+Title: Economics of a Bottleneck  
+
+\section{Introduction}
+De simpleste modeller der har at gøre med urban trængsel antager, at et fast antal, $N$, identiske individer, en per bil, må rejse mellem hjem og arbejde i myldretiden på en enkelt vej. Den individuelle rejsetid, $T$, er givet ved trængselsfunktionen $T=T(N,w)$, hvor $w$ er vej bredden og $\frac{\partial{T}} {\partial{N}} >0$ og $\frac{\partial{T}} {\partial{w}} <0$.
+Dette kan tolkes som en implicit antagelse af at længden på myldretiden er eksogen og at trafikflowet er uniformt i myldretiden. Dette beskrives i artiklen som den "naive" trængselsmodel modsat den mere sofistikerede trængselsmodel som eksplicit behandler den fysiske trafik strøm.
+
+Modellen er blevet udvidet til at tage hensyn til elastisk rejse efterspørgsel og flere tilstande er blevet inkorporeret i den monocentriske-bymodel. Selvom modellen er brugt meget, evner den dog ikke at svare på spørgsmålet *hvornår tager individer hjemmefra?* og på den måde beksrive trade-off'et individerne står med, skal man tage tidligere eller senere afsted og undgå myldretidstrafikken, og betale "straffen": at komme tidligere eller senere på arbejde. Eller skal man rejse i myldretidstrafikken hvor rejsetiden er lang, men komme på arbejde i retmæssig tid.
+
+\subsection{Modellen}
+
